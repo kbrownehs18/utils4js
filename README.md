@@ -1,2 +1,2 @@
-# utils4js
-utils for js
+# utils4ts
+utils for typescript
