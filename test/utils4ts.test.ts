@@ -1,4 +1,4 @@
-import { md5, authcode } from '../src';
+import { md5, authcode, Logger } from '../src';
 
 describe('secure', () => {
   it('md5', () => {
@@ -9,5 +9,11 @@ describe('secure', () => {
     const name = 'Robbie';
     const encodeName = authcode(name, false);
     expect(name).toEqual(authcode(encodeName, true));
+  });
+  it('log', () => {
+    const logger = new Logger('warn');
+    logger.info('INOF');
+    logger.warn('WARN');
+    logger.error('ERROR');
   });
 });
