@@ -1,32 +1,34 @@
-export class Logger {
-  logLevel: string;
+export namespace log {
+  export class Logger {
+    logLevel: string;
 
-  constructor(logLevel: string = 'info') {
-    this.logLevel = logLevel;
-  }
-
-  log(level: string, ...messages: any[]) {
-    if (this.shouldLog(level)) {
-      console.log(...messages);
+    constructor(logLevel: string = 'info') {
+      this.logLevel = logLevel;
     }
-  }
 
-  error(...messages: any[]) {
-    this.log('error', ...messages);
-  }
+    log(level: string, ...messages: any[]) {
+      if (this.shouldLog(level)) {
+        console.log(...messages);
+      }
+    }
 
-  warn(...messages: any[]) {
-    this.log('warn', ...messages);
-  }
+    error(...messages: any[]) {
+      this.log('error', ...messages);
+    }
 
-  info(...messages: any[]) {
-    this.log('info', ...messages);
-  }
+    warn(...messages: any[]) {
+      this.log('warn', ...messages);
+    }
 
-  private shouldLog(level: string) {
-    const logLevels = ['error', 'warn', 'info'];
-    const currentLevelIndex = logLevels.indexOf(this.logLevel);
-    const messageLevelIndex = logLevels.indexOf(level);
-    return messageLevelIndex <= currentLevelIndex;
+    info(...messages: any[]) {
+      this.log('info', ...messages);
+    }
+
+    private shouldLog(level: string) {
+      const logLevels = ['error', 'warn', 'info'];
+      const currentLevelIndex = logLevels.indexOf(this.logLevel);
+      const messageLevelIndex = logLevels.indexOf(level);
+      return messageLevelIndex <= currentLevelIndex;
+    }
   }
 }
