@@ -1,15 +1,20 @@
 {
   "name": "utils4ts",
-  "version": "1.0.9",
-  "main": "src/index.ts",
+  "version": "1.0.10",
+  "main": "dist/index.ts",
   "license": "MIT",
   "homepage": "https://github.com/kbrownehs18/utils4ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kbrownehs18/utils4ts.git"
+    "url": "git+https://github.com/kbrownehs18/utils4ts.git"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.20",

@@ -104,6 +104,9 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  }
+    "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*"], // 包含的文件
+  "exclude": ["node_modules", "lib"] // 排除的文件夹
 }

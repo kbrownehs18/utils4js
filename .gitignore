@@ -33,3 +33,8 @@ Thumbs.db
 *.seed
 *.pid.lock
 *.code-workspace
+
+.DS_Store
+dist/
+node_modules/
+*.tgz
